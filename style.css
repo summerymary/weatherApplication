@@ -1,0 +1,88 @@
+.banner {
+    margin: auto;
+    justify-self: center;
+    border-radius: 3%;
+    width: 50%;
+    min-height: 400px;
+    text-align: center;
+}
+
+body {
+    min-height: 100vh;
+}
+
+p {
+    color: white;
+    margin: 0;
+    font: 500 50px Sans-serif;
+    margin-bottom: 10px;
+}
+
+.city-name {
+    font: 500 50px Sans-serif;
+    margin: 110px 0 40px;
+}
+
+.deg {
+    font: 300 60px Sans-serif;
+    margin-bottom: 40px;
+}
+
+.small-text {
+    font: 200 20px Sans-serif;
+}
+
+.description {
+    padding-left: 35%;
+    text-align: start;
+}
+
+.subtitle {
+    font: 200 30px Sans-serif;
+    margin-bottom: 30px;
+}
+
+.day {
+    background: linear-gradient(rgb(114, 186, 249), rgb(123, 222, 252));
+}
+
+.night {
+    background: linear-gradient(rgb(7, 13, 57), rgb(3, 1, 8));
+}
+
+.morning {
+    background: linear-gradient(rgb(161, 225, 243), rgb(244, 164, 164));
+}
+
+.evening {
+    background: linear-gradient(rgb(108, 185, 248), rgb(247, 164, 120));
+}
+
+.late-evening {
+    background: linear-gradient(rgb(85, 72, 136), rgb(183, 123, 91));
+}
+
+. .rain {
+    background: url(images/rain.gif);
+    filter: opacity(50%);
+    background-size: 100%;
+    position: absolute;
+    width: 100%;
+    min-height: 110vh;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.clouds {
+    background: url(images/cloud.png);
+    background-size: 100%;
+    position: absolute;
+    transform: rotate(180deg);
+    filter: opacity(60%);
+    width: 100%;
+    height: 70%;
+    left: -15%;
+    top: 0;
+    z-index: -1;
+}
