@@ -86,3 +86,28 @@ p {
     top: 0;
     z-index: -1;
 }
+
+.input {
+    height: 30px;
+    border-radius: 20px;
+    background-color: rgba(0, 191, 255, 0);
+    border: solid 1px white;
+    box-sizing: border-box;
+    padding: 10px;
+    color: white;
+}
+
+.searh {
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url(./images/searh.png);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+}
+
+.inputs-container {
+    display: flex;
+    vertical-align: middle;
+    gap: 10px;
+}

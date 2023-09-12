@@ -8,15 +8,12 @@
     <title>Document</title>
 </head>
 <body>
-
+<?php include 'get-coordinates.php' ?>
  <?php
- $lat = 56.6388;
- $lon = 47.8908;
  $myKey = '83ef3ed148d022c3cc0ea51d09d29092';
  $getWeather = file_get_contents("https://api.openweathermap.org/data/2.5/weather?lat={$lat}&lon={$lon}&appid={$myKey}&units=metric");
-
  $wheatherData = json_decode($getWeather, true);
-// var_dump($wheatherData); 
+
  $main = $wheatherData['main'];
  $temp = (int)$main['temp'];
  $feelsLike = (int)$main['feels_like'];
@@ -53,7 +50,17 @@ $currentHour = $dateTime->format('H');
         echo 'data.currentWeather = "' . $weatherDescription. '";';
     ?>
  </script>
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+<p class="small-text">Find the weather in your city</p>  
+<div class="inputs-container">
+    <input class="input"type="text" name="name" value="<?php echo $cityName;?>">
+  <input class="searh"type="submit" name="submit" value="">  
+</div>
+</form>
 
+<?php
+// echo $nameOfCity;
+?>
 <main class="main">
     <div class="banner">
         <p class="city-name"><?php echo $cityName ?></p>
